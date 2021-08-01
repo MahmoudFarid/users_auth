@@ -1,0 +1,10 @@
+Pillow==8.3.1
+argon2-cffi==20.1.0  # https://github.com/hynek/argon2_cffi
+
+# Django
+# ------------------------------------------------------------------------------
+django==3.1.13  # pyup: < 3.2  # https://www.djangoproject.com/
+django-environ==0.4.5  # https://github.com/joke2k/django-environ
+django-model-utils==4.1.1  # https://github.com/jazzband/django-model-utils
+# Django REST Framework
+djangorestframework==3.12.4  # https://github.com/encode/django-rest-framework
