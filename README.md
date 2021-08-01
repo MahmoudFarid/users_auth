@@ -1,7 +1,5 @@
-RSS Scraper App
-===============
-
-A django rest app for rss scraper.
+Simple User CRUD Operations
+===========================
 
 
 Setting Up Development Environment
