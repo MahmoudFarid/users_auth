@@ -270,7 +270,7 @@ tags
 
 ### Project template
 
-users/media/
+auth/media/
 
 .pytest_cache/
 
