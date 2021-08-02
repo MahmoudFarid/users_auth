@@ -1,6 +1,4 @@
 from django.contrib.auth import get_user_model
-from django.db import IntegrityError
-from django.utils.translation import gettext_lazy as _
 
 from rest_framework import serializers
 
@@ -27,15 +25,9 @@ class UserCreateSerializer(UserSerializer):
         fields = UserSerializer.Meta.fields + ("password",)
 
     def update(self, instance, validated_data):
-        try:
-            user = User.objects.update_user(instance, **validated_data)
-        except IntegrityError:
-            raise serializers.ValidationError(_("Unable to update user."))
+        user = User.objects.update_user(instance, **validated_data)
         return user
 
     def create(self, validated_data):
-        try:
-            user = User.objects.create_user(**validated_data)
-        except IntegrityError:
-            raise serializers.ValidationError(_("Unable to create user."))
+        user = User.objects.create_user(**validated_data)
         return user
